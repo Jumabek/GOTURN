@@ -8,6 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
+MODEL_DIR=models/tuning_conv_layers
 FOLDER=GOTURN1
 RANDOM_SEED=800
 
@@ -17,16 +18,17 @@ VIDEOS_FOLDER_IMAGENET=$1
 ANNOTATIONS_FOLDER_IMAGENET=$2
 VIDEOS_FOLDER=$3
 ANNOTATIONS_FOLDER=$4
-SOLVER=nets/solver.prototxt
-TRAIN_PROTO=nets/tracker.prototxt
+
+
+SOLVER=nets/$MODEL_DIR/solver.prototxt
+TRAIN_PROTO=nets/$MODEL_DIR/tracker.prototxt
 CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
 
-BASEDIR=nets
-RESULT_DIR=$BASEDIR/results/$FOLDER
-SOLVERSTATE_DIR=$BASEDIR/solverstate/$FOLDER
 
-#Make folders to store results and snapshots
-mkdir -p $RESULT_DIR
+RESULT_DIR=nets/$MODEL_DIR
+SOLVERSTATE_DIR=$MODEL_DIR/solverstate
+
+#Make folders to store snapshots
 mkdir -p $SOLVERSTATE_DIR
 
 #Modify solver to save snapshot in SOLVERSTATE_DIR
