@@ -128,6 +128,19 @@ int main (int argc, char *argv[]) {
   caffe::Caffe::SetDevice(gpu_id);
 #endif
 
+  // Set up network.
+  RegressorTrain regressor_train(train_proto, caffe_model,
+                                   gpu_id, solver_file);
+  // Create an ExampleGenerator to generate training examples.
+  ExampleGenerator example_generator(lambda_shift, lambda_scale,
+                                     min_scale, max_scale);
+
+
+
+  // Set up trainer.
+  TrackerTrainer tracker_trainer(&example_generator, &regressor_train);
+
+
   // Load the image data.
   LoaderImagenetDet image_loader(videos_folder_imagenet, annotations_folder_imagenet);
   const std::vector<std::vector<Annotation> >& train_images = image_loader.get_images();
@@ -140,16 +153,6 @@ int main (int argc, char *argv[]) {
   alov_video_loader.get_videos(get_train, &train_videos);
   printf("Total training videos: %zu\n", train_videos.size());
 
-  // Create an ExampleGenerator to generate training examples.
-  ExampleGenerator example_generator(lambda_shift, lambda_scale,
-                                     min_scale, max_scale);
-
-  // Set up network.
-  RegressorTrain regressor_train(train_proto, caffe_model,
-                                 gpu_id, solver_file);
-
-  // Set up trainer.
-  TrackerTrainer tracker_trainer(&example_generator, &regressor_train);
 
   // Train tracker.
   while (tracker_trainer.get_num_batches() < kNumBatches) {
