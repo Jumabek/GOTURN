@@ -31,9 +31,6 @@ SOLVERSTATE_DIR=$MODEL_DIR/solverstate
 #Make folders to store snapshots
 mkdir -p $SOLVERSTATE_DIR
 
-#Modify solver to save snapshot in SOLVERSTATE_DIR
-mkdir -p nets/solver_temp
-SOLVER_TEMP=nets/solver_temp/solver_temp_$FOLDER.prototxt
 sed s#SOLVERSTATE_DIR#$SOLVERSTATE_DIR# <$SOLVER >$SOLVER_TEMP
 sed -i s#TRAIN_FILE#$TRAIN_PROTO# $SOLVER_TEMP
 sed -i s#DEVICE_ID#$GPU_ID# $SOLVER_TEMP
