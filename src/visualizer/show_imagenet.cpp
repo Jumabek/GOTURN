@@ -2,6 +2,7 @@
 
 #include "loader/loader_imagenet_det.h"
 
+#include <iostream>
 #include <string>
 
 using std::string;
