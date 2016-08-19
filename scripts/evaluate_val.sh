@@ -18,15 +18,17 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
+MODEL_DIR=nets/models/pretrained_model
 
 FOLDER=GOTURN1_val
 
-DEPLOY_PROTO=nets/tracker.prototxt
+DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 
-CAFFE_MODEL=nets/models/pretrained_model/tracker.caffemodel
+CAFFE_MODEL=$MODEL_DIR/tracker.caffemodel
 
-OUTPUT_FOLDER=nets/tracker_output/$FOLDER
+OUTPUT_FOLDER=$MODEL_DIR/tracker_output
 
+mkdir -p OUTPUT_FOLDER
 echo "Saving output to " $OUTPUT_FILE
 
 # Run tracker on validation set
