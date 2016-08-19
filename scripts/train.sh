@@ -8,7 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
-MODEL_DIR=models/tuning_conv_layers
+MODEL_DIR=models/tune_conv
 FOLDER=GOTURN1
 RANDOM_SEED=800
 
