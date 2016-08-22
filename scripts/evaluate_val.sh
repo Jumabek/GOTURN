@@ -24,9 +24,16 @@ FOLDER=GOTURN1_val
 
 DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 
-CAFFE_MODEL=$MODEL_DIR/tracker.caffemodel
 
-OUTPUT_FOLDER=$MODEL_DIR/tracker_output
+
+for i in $(seq 1 10)
+do 
+	echo $i
+	iter=$(($i*50000))
+	echo $iter
+RESULT_DIR=$MODEL_DIR/val_result_$iter.txt
+CAFFE_MODEL=$MODEL_DIR/solverstate/caffenet_train_iter_$iter.caffemodel
+OUTPUT_FOLDER=$MODEL_DIR/tracker_output_$iter
 
 mkdir -p OUTPUT_FOLDER
 echo "Saving output to " $OUTPUT_FILE
@@ -35,5 +42,5 @@ echo "Saving output to " $OUTPUT_FILE
 build/test_tracker_alov $VIDEOS_FOLDER $ANNOTATIONS_FOLDER $DEPLOY_PROTO $CAFFE_MODEL $OUTPUT_FOLDER $USE_TRAIN $SAVE_VIDEOS $GPU_ID 
 
 # Compute validation score
-matlab -nodisplay -r "addpath(genpath('scripts/Fscore_v1.0')); evaluate_all $ANNOTATIONS_FOLDER $OUTPUT_FOLDER; exit"
-
+matlab -nodisplay -r "addpath(genpath('scripts/Fscore_v1.0')); evaluate_all $ANNOTATIONS_FOLDER $OUTPUT_FOLDER;    exit" 2> $RESULT_DIR 
+done

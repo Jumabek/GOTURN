@@ -6,3 +6,4 @@ build
 *.pyc
 *.caffemodel
 *.solverstate
+nets/models/*/tracker_output_*
