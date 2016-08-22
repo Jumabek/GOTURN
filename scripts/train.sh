@@ -8,7 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
-MODEL_DIR=nets/models/tune_conv
+MODEL_DIR=nets/models/scratch
 FOLDER=GOTURN1
 RANDOM_SEED=800
 
@@ -20,9 +20,9 @@ VIDEOS_FOLDER=$3
 ANNOTATIONS_FOLDER=$4
 
 
-SOLVER=nets/$MODEL_DIR/solver.prototxt
+SOLVER=$MODEL_DIR/solver.prototxt
 
-TRAIN_PROTO=nets/$MODEL_DIR/tracker.prototxt
+TRAIN_PROTO=$MODEL_DIR/tracker.prototxt
 #CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
 CAFFE_MODEL=NONE
 

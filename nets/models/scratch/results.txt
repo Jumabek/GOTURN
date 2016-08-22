@@ -1,0 +1,16 @@
+F0822 17:43:13.182832  4949 io.cpp:36] Check failed: fd != -1 (-1 vs. -1) File not found: nets/nets/models/scratch/tracker.prototxt
+*** Check failure stack trace: ***
+    @     0x7f5c243acdaa  (unknown)
+    @     0x7f5c243acce4  (unknown)
+    @     0x7f5c243ac6e6  (unknown)
+    @     0x7f5c243af687  (unknown)
+    @     0x7f5c25393084  caffe::ReadProtoFromTextFile()
+    @     0x7f5c2539b4dc  caffe::ReadNetParamsFromTextFileOrDie()
+    @     0x7f5c253d0119  caffe::Net<>::Net()
+    @           0x42f625  Regressor::SetupNetwork()
+    @           0x42faaf  Regressor::Regressor()
+    @           0x433f9d  RegressorTrain::RegressorTrain()
+    @           0x40f589  main
+    @     0x7f5c22c73f45  (unknown)
+    @           0x410494  (unknown)
+    @              (nil)  (unknown)
