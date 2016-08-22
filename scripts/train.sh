@@ -8,7 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
-MODEL_DIR=models/tune_conv
+MODEL_DIR=nets/models/tune_conv
 FOLDER=GOTURN1
 RANDOM_SEED=800
 
@@ -21,16 +21,19 @@ ANNOTATIONS_FOLDER=$4
 
 
 SOLVER=nets/$MODEL_DIR/solver.prototxt
-TRAIN_PROTO=nets/$MODEL_DIR/tracker.prototxt
+TRAIN_PROTO=$MODEL_DIR/tracker.prototxt
 CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
 
 
-RESULT_DIR=nets/$MODEL_DIR
+RESULT_DIR=$MODEL_DIR
 SOLVERSTATE_DIR=$MODEL_DIR/solverstate
 
 #Make folders to store snapshots
 mkdir -p $SOLVERSTATE_DIR
 
+#Modify solver to save snapshot in SOLVERSTATE_DIR
+mkdir -p $MODEL_DIR/solver_temp
+SOLVER_TEMP=$MODEL_DIR/solver_temp/solver_temp_$FOLDER.prototxt
 sed s#SOLVERSTATE_DIR#$SOLVERSTATE_DIR# <$SOLVER >$SOLVER_TEMP
 sed -i s#TRAIN_FILE#$TRAIN_PROTO# $SOLVER_TEMP
 sed -i s#DEVICE_ID#$GPU_ID# $SOLVER_TEMP
