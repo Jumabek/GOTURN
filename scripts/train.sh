@@ -22,8 +22,8 @@ ANNOTATIONS_FOLDER=$4
 
 SOLVER=nets/$MODEL_DIR/solver.prototxt
 TRAIN_PROTO=nets/$MODEL_DIR/tracker.prototxt
-CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
-
+#CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
+CAFFE_MODEL=NONE
 
 RESULT_DIR=nets/$MODEL_DIR
 SOLVERSTATE_DIR=$MODEL_DIR/solverstate
