@@ -18,7 +18,7 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
-MODEL_DIR=nets/models/smaller_fc
+MODEL_DIR=nets/models/scratch
 
 FOLDER=GOTURN1_val
 

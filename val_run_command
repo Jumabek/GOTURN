@@ -4,4 +4,4 @@ bash scripts/evaluate_val.sh /media/jumabek/944A8F1C4A8EFA6E/Users/jumabek/Downl
 
 
 #on server
-bash scripts/evaluate_val.sh ../alov_imagedata++ ../alov300++_rectangleAnnotation_full 
+bash scripts/evaluate_val.sh ../alov_imagedata++ ../alov300++_rectangleAnnotation_full 2> nets/models/scratch/val_evaulation.txt 
