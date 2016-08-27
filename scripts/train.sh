@@ -8,7 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
-MODEL_DIR=nets/models/scratch
+MODEL_DIR=nets/models/small_scratch
 FOLDER=GOTURN1
 RANDOM_SEED=800
 

@@ -18,7 +18,7 @@
 using std::string;
 
 // Desired number of training batches.
-const int kNumBatches = 500000;
+const int kNumBatches = 1000000;
 
 namespace {
 
