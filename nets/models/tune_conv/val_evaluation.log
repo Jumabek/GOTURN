@@ -1,3 +1,24 @@
+#this 4 iteratione evaluations are only for padding
+nets/models/tune_conv/tracker_output_250000
+Thresh: 0.500000, Mean: 0.516793
+Thresh: 0.700000, Mean: 0.410844
+Thresh: 0.900000, Mean: 0.283475
+nets/models/tune_conv/tracker_output_250000
+Thresh: 0.500000, Mean: 0.516793
+Thresh: 0.700000, Mean: 0.410844
+Thresh: 0.900000, Mean: 0.283475
+nets/models/tune_conv/tracker_output_250000
+Thresh: 0.500000, Mean: 0.516793
+Thresh: 0.700000, Mean: 0.410844
+Thresh: 0.900000, Mean: 0.283475
+nets/models/tune_conv/tracker_output_250000
+Thresh: 0.500000, Mean: 0.516793
+Thresh: 0.700000, Mean: 0.410844
+Thresh: 0.900000, Mean: 0.283475
+
+#now the real evaluation output starts
+
+
 Video 17: 05-Shape_video00022
 Video 18: 05-Shape_video00023
 Video 19: 05-Shape_video00024

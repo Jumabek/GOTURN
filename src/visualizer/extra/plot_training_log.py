@@ -15,7 +15,7 @@ def get_log_parsing_script():
     return dirname + '/parse_log.sh'
 
 def get_log_file_suffix():
-    return '.txt'
+    return '.log'
 
 def get_chart_type_description_separator():
     return '  vs. '
