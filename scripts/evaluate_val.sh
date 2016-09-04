@@ -26,12 +26,12 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 
 
 
-for i in $(seq 3 3)
+for i in $(seq 11 20)
 do 
 	echo $i
 	iter=$(($i*50000))
 	echo $iter
-RESULT_DIR=$MODEL_DIR/val_result_$iter.txt
+RESULT_FILE=$MODEL_DIR/val_result_$iter.txt
 CAFFE_MODEL=$MODEL_DIR/solverstate/caffenet_train_iter_$iter.caffemodel
 OUTPUT_FOLDER=$MODEL_DIR/tracker_output_$iter
 
@@ -42,5 +42,5 @@ echo "Saving output to " $OUTPUT_FILE
 build/test_tracker_alov $VIDEOS_FOLDER $ANNOTATIONS_FOLDER $DEPLOY_PROTO $CAFFE_MODEL $OUTPUT_FOLDER $USE_TRAIN $SAVE_VIDEOS $GPU_ID 
 
 # Compute validation score
-matlab -nodisplay -r "addpath(genpath('scripts/Fscore_v1.0')); evaluate_all $ANNOTATIONS_FOLDER $OUTPUT_FOLDER;    exit" 2> $RESULT_DIR 
+matlab -nodisplay -r "addpath(genpath('scripts/Fscore_v1.0')); evaluate_all $ANNOTATIONS_FOLDER $OUTPUT_FOLDER $RESULT_FILE;    exit" 
 done

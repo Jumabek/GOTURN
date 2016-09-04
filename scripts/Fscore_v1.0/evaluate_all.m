@@ -1,4 +1,4 @@
-function evaluate_all(annotations_folder, output_folder)
+function evaluate_all(annotations_folder, output_folder,file2save)
 
 fprintf('%s\n', output_folder);
 output_files = dir(output_folder);
@@ -35,8 +35,9 @@ for j = 1:length(threshes)
     scores(j) = mean(Fscores);
 end
 
+fileID = fopen(file2save,'w')
 for i = 1:length(threshes)
-   fprintf('Thresh: %f, Mean: %f\n', threshes(i), scores(i)); 
+   fprintf(fileID,'Thresh: %f, Mean: %f\n', threshes(i), scores(i)); 
 end
 
 end
