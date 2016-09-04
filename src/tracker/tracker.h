@@ -18,6 +18,11 @@ public:
   virtual void Track(const cv::Mat& image_curr, RegressorBase* regressor,
              BoundingBox* bbox_estimate_uncentered);
 
+  // Estimate the location of the target object in the current image.
+  void TrackByMemorizing(const cv::Mat& image_curr, RegressorBase* regressor,
+             BoundingBox* bbox_estimate_uncentered);
+
+
   // Initialize the tracker with the ground-truth bounding box of the first frame.
   void Init(const cv::Mat& image_curr, const BoundingBox& bbox_gt,
             RegressorBase* regressor);
