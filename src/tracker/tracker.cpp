@@ -78,6 +78,45 @@ void Tracker::Track(const cv::Mat& image_curr, RegressorBase* regressor,
   bbox_curr_prior_tight_ = *bbox_estimate_uncentered;
 }
 
+void Tracker::TrackByMemorizing(const cv::Mat& image_curr, RegressorBase* regressor,
+                    BoundingBox* bbox_estimate_uncentered) {
+  // Get target from previous image.
+  cv::Mat target_pad;
+  CropPadImage(bbox_prev_tight_, image_prev_, &target_pad);
+
+  // Crop the current image based on predicted prior location of target.
+  cv::Mat curr_search_region;
+  BoundingBox search_location;
+  double edge_spacing_x, edge_spacing_y;
+  CropPadImage(bbox_curr_prior_tight_, image_curr, &curr_search_region, &search_location, &edge_spacing_x, &edge_spacing_y);
+
+  // Estimate the bounding box location of the target, centered and scaled relative to the cropped image.
+  BoundingBox bbox_estimate;
+  regressor->Regress(image_curr, curr_search_region, target_pad, &bbox_estimate);
+
+  // Unscale the estimation to the real image size.
+  BoundingBox bbox_estimate_unscaled;
+  bbox_estimate.Unscale(curr_search_region, &bbox_estimate_unscaled);
+
+  // Find the estimated bounding box location relative to the current crop.
+  bbox_estimate_unscaled.Uncenter(image_curr, search_location, edge_spacing_x, edge_spacing_y, bbox_estimate_uncentered);
+
+  if (show_tracking_) {
+    ShowTracking(target_pad, curr_search_region, bbox_estimate);
+  }
+
+  // Save the image.
+  image_prev_ = (image_prev_ + image_curr)/2;
+
+  // Save the current estimate as the location of the target.
+  bbox_prev_tight_ = *bbox_estimate_uncentered;
+
+  // Save the current estimate as the prior prediction for the next image.
+  // TODO - replace with a motion model prediction?
+  bbox_curr_prior_tight_ = *bbox_estimate_uncentered;
+}
+
+
 void Tracker::ShowTracking(const cv::Mat& target_pad, const cv::Mat& curr_search_region, const BoundingBox& bbox_estimate) const {
   // Resize the target.
   cv::Mat target_resize;

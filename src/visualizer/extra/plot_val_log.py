@@ -70,8 +70,10 @@ def plot_chart_multi_threshold(path_to_png, path_to_log_list):
         [mean50, mean70, mean90] = separate_three(mean)
         
         #number of evaluations
-        N=20
-        print 'LENGTH = ',len(mean50)
+  
+        
+        N = len(mean50)
+
         
         ind = np.arange(N)
         
