@@ -8,7 +8,7 @@ max_iter: 450000
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 50000
-snapshot_prefix: "nets/models/small_scratch_nopad/solverstate2/caffenet_train"
+snapshot_prefix: "nets/models/small_scratch_nopad/solverstate/caffenet_train"
 random_seed: 800
 device_id: 0
 solver_mode: GPU
