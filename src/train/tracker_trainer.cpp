@@ -5,7 +5,7 @@
 #include "network/regressor.h"
 
 // Number of images in each batch.
-const int kBatchSize = 200;
+const int kBatchSize = 50;
 
 // Number of examples that we generate (by applying synthetic transformations)
 // to each image.
