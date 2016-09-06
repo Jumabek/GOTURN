@@ -25,13 +25,14 @@ FOLDER=GOTURN1_val
 DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 
 
+RESULT_FILE=$MODEL_DIR/val_evaluation.log
 
 for i in $(seq 1 14)
 do 
 	echo $i
 	iter=$(($i*50000))
 	echo $iter
-RESULT_FILE=$MODEL_DIR/val_result_$iter.txt
+
 CAFFE_MODEL=$MODEL_DIR/solverstate/caffenet_train_iter_$iter.caffemodel
 OUTPUT_FOLDER=$MODEL_DIR/tracker_output_$iter
 
