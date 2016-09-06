@@ -8,6 +8,7 @@ import matplotlib.colors as colors
 import matplotlib.pyplot as plt
 import matplotlib.legend as lgd
 import matplotlib.markers as mks
+import numpy as np
 
 def get_log_parsing_script():
     dirname = os.path.dirname(os.path.abspath(inspect.getfile(
@@ -109,6 +110,8 @@ def get_legend_loc(chart_type):
     return loc
 
 def plot_chart(chart_type, path_to_png, path_to_log_list):
+    fig = plt.figure()                                                               
+    ax = fig.add_subplot(1,1,1)
     for path_to_log in path_to_log_list:
         os.system('%s %s' % (get_log_parsing_script(), path_to_log))
         data_file = get_data_file(chart_type, path_to_log)
@@ -131,7 +134,7 @@ def plot_chart(chart_type, path_to_png, path_to_log_list):
             while not ok:
                 try:
                     marker = random_marker()
-                    plt.plot(data[0], data[1], label = label, color = color,
+                    ax.plot(data[0], data[1], label = label, color = color,
                              marker = marker, linewidth = linewidth)
                     ok = True
                 except:
@@ -141,6 +144,16 @@ def plot_chart(chart_type, path_to_png, path_to_log_list):
     plt.title(get_chart_type_description(chart_type))
     plt.xlabel(x_axis_field)
     plt.ylabel(y_axis_field)
+    
+	
+       
+    
+    major_ticks = np.arange(0,1200,200)
+    minor_ticks = np.arange(0,1200,50)
+
+    ax.set_yticks(major_ticks)
+    ax.set_yticks(minor_ticks,minor=True)
+    ax.grid(which='both')
     plt.savefig(path_to_png)
     plt.show()
 

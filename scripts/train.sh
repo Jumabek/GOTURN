@@ -8,7 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
-MODEL_DIR=nets/models/small_scratch_nopad
+MODEL_DIR=nets/models/smlr_scrtch_npad
 FOLDER=GOTURN1
 RANDOM_SEED=800
 
@@ -24,15 +24,15 @@ SOLVER=$MODEL_DIR/solver.prototxt
 
 TRAIN_PROTO=$MODEL_DIR/tracker.prototxt
 #CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
-CAFFE_MODEL=NONE
-#CAFFE_MODEL=$MODEL_DIR/solverstate/caffenet_train_iter_300000.caffemodel
+#CAFFE_MODEL=NONE
+CAFFE_MODEL=$MODEL_DIR/solverstate.old/caffenet_train_iter_150000.caffemodel
 
 
 
 
 
 RESULT_DIR=$MODEL_DIR
-SOLVERSTATE_DIR=$MODEL_DIR/solverstate2
+SOLVERSTATE_DIR=$MODEL_DIR/solverstate
 
 #Make folders to store snapshots
 mkdir -p $SOLVERSTATE_DIR

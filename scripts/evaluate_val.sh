@@ -18,7 +18,7 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
-MODEL_DIR=nets/models/small_scratch
+MODEL_DIR=nets/models/small_scratch_nopad
 
 FOLDER=GOTURN1_val
 
@@ -26,7 +26,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 
 
 
-for i in $(seq 11 20)
+for i in $(seq 1 14)
 do 
 	echo $i
 	iter=$(($i*50000))
