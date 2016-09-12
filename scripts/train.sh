@@ -8,7 +8,7 @@ if [ -z "$4" ]
 fi
 
 GPU_ID=0
-MODEL_DIR=nets/models/smlr_scrtch_npad
+MODEL_DIR=nets/models/pr_tr_smlr_scrtch_npd
 FOLDER=GOTURN1
 RANDOM_SEED=800
 
@@ -25,7 +25,7 @@ SOLVER=$MODEL_DIR/solver.prototxt
 TRAIN_PROTO=$MODEL_DIR/tracker.prototxt
 #CAFFE_MODEL=nets/models/weights_init/tracker_init.caffemodel
 #CAFFE_MODEL=NONE
-CAFFE_MODEL=$MODEL_DIR/solverstate.old/caffenet_train_iter_150000.caffemodel
+CAFFE_MODEL=../caffe/models/bvlc_reference_caffenet_npd/caffenet_train_iter_450000.caffemodel
 
 
 

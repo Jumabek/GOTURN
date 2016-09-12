@@ -1,0 +1,18 @@
+Finished tracking 56 videos with 22712 total frames
+Mean time: 285.327778 ms
+[TIMER] Total evaluation (including loading videos): 1.82274 hours.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2013 The MathWorks, Inc.
+                    R2013a (8.1.0.604) 64-bit (glnxa64)
+                             February 15, 2013
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+nets/models/smaller_fc/tracker_output
+Thresh: 0.500000, Mean: 0.574278
+Thresh: 0.700000, Mean: 0.459716
+Thresh: 0.900000, Mean: 0.317388
+
