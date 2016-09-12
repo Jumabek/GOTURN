@@ -7,3 +7,4 @@ build
 *.caffemodel
 *.solverstate
 nets/models/*/tracker_output_*
+Debug/
