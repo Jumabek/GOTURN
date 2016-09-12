@@ -8,7 +8,7 @@ if [ -z "$1" ]
 fi
 
 # Choose which GPU the tracker runs on
-GPU_ID=1
+GPU_ID=0
 
 # Whether to evaluate on the training set or the validation set
 USE_TRAIN=0
@@ -27,7 +27,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 
 
 
-for i in $(seq 1 9)
+for i in $(seq 10 12)
 do 
 	echo $i
 	iter=$(($i*50000))
