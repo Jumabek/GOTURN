@@ -35,10 +35,11 @@ for j = 1:length(threshes)
     scores(j) = mean(Fscores);
 end
 
-fileID = fopen(file2save,'w')
+fileID = fopen(file2save,'a')
 for i = 1:length(threshes)
    fprintf(fileID,'Thresh: %f, Mean: %f\n', threshes(i), scores(i)); 
 end
+fprintf(fileID,'\n'); 
 
 end
 
