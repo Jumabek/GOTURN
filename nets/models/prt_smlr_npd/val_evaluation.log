@@ -22,7 +22,17 @@ Thresh: 0.500000, Mean: 0.175061
 Thresh: 0.700000, Mean: 0.120858
 Thresh: 0.900000, Mean: 0.082466
 
-Thresh: 0.500000, Mean: NaN
-Thresh: 0.700000, Mean: NaN
-Thresh: 0.900000, Mean: NaN
+#350K
+
+Thresh: 0.500000, Mean: 0.171396
+Thresh: 0.700000, Mean: 0.118711
+Thresh: 0.900000, Mean: 0.080984
+
+Thresh: 0.500000, Mean: 0.167657
+Thresh: 0.700000, Mean: 0.116521
+Thresh: 0.900000, Mean: 0.079479
+
+Thresh: 0.500000, Mean: 0.178019
+Thresh: 0.700000, Mean: 0.121545
+Thresh: 0.900000, Mean: 0.082582
 
