@@ -69,6 +69,7 @@ include_directories(src)
 
 add_executable (test_tracker_vot src/test/test_tracker_vot.cpp)
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${Caffe_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} /home/ailab/jumabek/trax/build/libtrax.so)
 target_link_libraries (test_tracker_vot ${PROJECT_NAME})
 
 add_executable (test_tracker_alov src/test/test_tracker_alov.cpp)
