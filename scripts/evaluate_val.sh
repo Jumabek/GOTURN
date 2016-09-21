@@ -8,7 +8,7 @@ if [ -z "$1" ]
 fi
 
 # Choose which GPU the tracker runs on
-GPU_ID=1
+GPU_ID=0
 
 # Whether to evaluate on the training set or the validation set
 USE_TRAIN=0
@@ -18,8 +18,7 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
-MODEL_DIR=nets/models/ptr_smlr_npd
-
+MODEL_DIR=models/sms_wtht_wht_nms
 FOLDER=GOTURN1_val
 
 DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
@@ -27,7 +26,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 RESULT_FILE=$MODEL_DIR/val_evaluation.log
 
 
-for i in $(seq 1 7)
+for i in $(seq 6 8)
 do 
 	echo $i
 	iter=$(($i*50000))
@@ -38,7 +37,7 @@ OUTPUT_FOLDER=$MODEL_DIR/tracker_output_$iter
 
 mkdir -p OUTPUT_FOLDER
 echo "Saving output to " $OUTPUT_FILE
-
+echo "Testing model " $CAFFE_MODEL
  
 # Run tracker on validation set
 build/test_tracker_alov $VIDEOS_FOLDER $ANNOTATIONS_FOLDER $DEPLOY_PROTO $CAFFE_MODEL $OUTPUT_FOLDER $USE_TRAIN $SAVE_VIDEOS $GPU_ID 

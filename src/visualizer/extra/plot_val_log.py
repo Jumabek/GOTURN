@@ -87,7 +87,7 @@ def plot_chart_multi_threshold(path_to_png, path_to_log_list):
         ax.set_ylabel('Means')
         ax.set_xlabel('Iterations')
         ax.set_title('Means of average IoU on validation set')
-        ax.set_xticks(ind + 1)
+        ax.set_xticks(ind)
         ax.set_xticklabels(('50K', '100K', '150K', '200K', '250K','300K', '350K', '400K', '450K', '500K'))
 	
 	ticks = np.arange(0,0.7,0.05)
