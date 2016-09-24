@@ -1,0 +1,16 @@
+F0923 10:45:46.905830  5440 io.cpp:36] Check failed: fd != -1 (-1 vs. -1) File not found: models/sms_wht_nms2/tracker.prototxt
+*** Check failure stack trace: ***
+    @     0x7f4732043daa  (unknown)
+    @     0x7f4732043ce4  (unknown)
+    @     0x7f47320436e6  (unknown)
+    @     0x7f4732046687  (unknown)
+    @     0x7f473324a384  caffe::ReadProtoFromTextFile()
+    @     0x7f4733252adc  caffe::ReadNetParamsFromTextFileOrDie()
+    @     0x7f4733287609  caffe::Net<>::Net()
+    @           0x434675  Regressor::SetupNetwork()
+    @           0x434aff  Regressor::Regressor()
+    @           0x4391bd  RegressorTrain::RegressorTrain()
+    @           0x412cf9  main
+    @     0x7f4730b2bf45  (unknown)
+    @           0x4147f7  (unknown)
+    @              (nil)  (unknown)

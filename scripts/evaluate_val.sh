@@ -26,7 +26,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 RESULT_FILE=$MODEL_DIR/val_evaluation.log
 
 
-for i in $(seq 6 8)
+for i in $(seq 6 14)
 do 
 	echo $i
 	iter=$(($i*50000))

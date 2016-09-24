@@ -1,6 +1,7 @@
 import sys
 import os
 import matplotlib.pyplot as plt
+import matplotlib.markers as mrk
 import numpy as np
 
 def get_mean_accuracies(path_to_log):
@@ -62,8 +63,14 @@ def separate_three(array):
     return arr1,arr2,arr3
         
 
-def plot_chart_multi_threshold(path_to_png, path_to_log_list):
-    for path_to_log in path_to_log_list:
+def plot_chart_multi_threshold(path_to_png, path_to_log_list,legend_labels):
+    fig, ax = plt.subplots()
+    markers = ('o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd')
+    lineStyles = [ '-', '--', ':']
+    for i in range(len(path_to_log_list)):
+        path_to_log=path_to_log_list[i]
+        linestyle = lineStyles[i]
+        marker = markers[i]
         [thresh, mean] = get_mean_accuracies(path_to_log)
 
         [thresh50, thresh70, thresh90] = separate_three(thresh)
@@ -79,57 +86,70 @@ def plot_chart_multi_threshold(path_to_png, path_to_log_list):
         
         #width of the bars
         
-        fig, ax = plt.subplots()
-        rects1 = ax.plot(ind,mean50,color='r')
-        rects2 = ax.plot(ind,mean70,color='b')
-        rects3 = ax.plot(ind,mean90,color='g')
+        print "linestyle = %s"%linestyle
+        rects1 = ax.plot(ind,mean50,marker,color='r',linestyle=linestyle,label=legend_labels[i])
+        rects2 = ax.plot(ind,mean70,marker,color='b',linestyle=linestyle)
+        rects3 = ax.plot(ind,mean90,marker,color='g',linestyle=linestyle)
         
         ax.set_ylabel('Means')
         ax.set_xlabel('Iterations')
         ax.set_title('Means of average IoU on validation set')
         ax.set_xticks(ind)
-        ax.set_xticklabels(('50K', '100K', '150K', '200K', '250K','300K', '350K', '400K', '450K', '500K'))
-	
-	ticks = np.arange(0,0.7,0.05)
-	ax.set_yticks(ticks)	
-	ax.grid()        
-	plt.savefig(path_to_png)
-        plt.show()
-        
-'''
-        data_file = get_data_file(chart_type, path_to_log)
-        x_axis_field, y_axis_field = get_field_descriptions(chart_type)
-        x, y = get_field_indices(x_axis_field, y_axis_field)
-        data = load_data(data_file, x, y)
-        ## TODO: more systematic color cycle for lines
-        color = [random.random(), random.random(), random.random()]
-        label = get_data_label(path_to_log)
-        linewidth = 0.75
-        ## If there too many datapoints, do not use marker.
-##        use_marker = False
-        use_marker = True
-        if not use_marker:
-            plt.plot(data[0], data[1], label = label, color = color,
-                     linewidth = linewidth)
-        else:
-            ok = False
-            ## Some markers throw ValueError: Unrecognized marker style
-            while not ok:
-                try:
-                    marker = random_marker()
-                    plt.plot(data[0], data[1], label = label, color = color,
-                             marker = marker, linewidth = linewidth)
-                    ok = True
-                except:
-                    pass
-    legend_loc = get_legend_loc(chart_type)
-    plt.legend(loc = legend_loc, ncol = 1) # ajust ncol to fit the space
-    plt.title(get_chart_type_description(chart_type))
-    plt.xlabel(x_axis_field)
-    plt.ylabel(y_axis_field)
+#        #ticks = ['50K', '100K', '150K', '200K', '250K','300K', '350K', '400K', '450K', '500K']
+        ticks = []
+        for i in range(1,N+1):
+            ticks.append(str(i*50)+'K')
+    ax.set_xticklabels(ticks)    
+    ticks = np.arange(0,0.7,0.05)
+    ax.set_yticks(ticks)    
+    ax.grid()   
+    ax.legend(loc='best', fancybox=True, framealpha=0.5)     
     plt.savefig(path_to_png)
     plt.show()
-'''
+        
+def plot_chart_single_threshold(path_to_png, path_to_log_list,legend_labels):
+    fig, ax = plt.subplots()
+    markers = ('o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd')
+    lineStyles = [ '-', '--', ':','-.','-', '--', ':','-.']
+    for i in range(len(path_to_log_list)):
+        path_to_log=path_to_log_list[i]
+        linestyle = lineStyles[i]
+        marker = markers[i]
+        [thresh, mean] = get_mean_accuracies(path_to_log)
+
+        [thresh50, thresh70, thresh90] = separate_three(thresh)
+        [mean50, mean70, mean90] = separate_three(mean)
+        
+        #number of evaluations
+  
+        
+        N = len(mean50)
+
+        
+        ind = np.arange(N)
+        
+        #width of the bars
+        
+        print "linestyle = %s"%linestyle
+        rects1 = ax.plot(ind,mean50,marker,linestyle=linestyle,label=legend_labels[i])
+        #rects2 = ax.plot(ind,mean70,marker,color='b',linestyle=linestyle)
+        #rects3 = ax.plot(ind,mean90,marker,color='g',linestyle=linestyle)
+        
+        ax.set_ylabel('Means')
+        ax.set_xlabel('Iterations')
+        ax.set_title('Means of average IoU on validation set')
+        ax.set_xticks(ind)
+#        #ticks = ['50K', '100K', '150K', '200K', '250K','300K', '350K', '400K', '450K', '500K']
+        ticks = []
+        for i in range(1,N+1):
+            ticks.append(str(i*50)+'K')
+    ax.set_xticklabels(ticks)    
+    ticks = np.arange(0,0.7,0.05)
+    ax.set_yticks(ticks)    
+    ax.grid()   
+    ax.legend(loc='best', fancybox=True, framealpha=0.5)     
+    plt.savefig(path_to_png)
+    plt.show()
 
 
 
@@ -152,7 +172,10 @@ if __name__ == '__main__':
         if not path_to_png.endswith('.png'):
             print 'Path must ends with png' % path_to_png
             sys.exit()
-        path_to_logs = sys.argv[2:]
+        path_to_logs = sys.argv[2].split(',')
+        legend_labels =sys.argv[3].split(',')
+
+        print "len of path to logs = ", len(path_to_logs)
         for path_to_log in path_to_logs:
             if not os.path.exists(path_to_log):
                 print 'Path does not exist: %s' % path_to_log
@@ -161,4 +184,4 @@ if __name__ == '__main__':
                 print 'Log file must end in %s.' % get_log_file_suffix()
                 print_help()
         ## plot_chart accpets multiple path_to_logs
-        plot_chart_multi_threshold(path_to_png, path_to_logs)
+        plot_chart_single_threshold(path_to_png, path_to_logs,legend_labels)
