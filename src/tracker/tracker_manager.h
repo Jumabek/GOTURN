@@ -21,6 +21,19 @@ public:
   // pause_val is normally ignored.
   void TrackAll(const size_t start_video_num, const int pause_val);
 
+  //--------track and remember version of TrackAll()--------
+
+  // Iterate over all videos and track the target object in each.
+  //alpha is the defining factor for how much momentum should prev_image history have.
+  void TrackAllAndRemember(float alpha) ;
+
+  // Iterate over all videos and track the target object in each.
+  // Start tracking the video with index start_video_num (for debugging).
+  // pause_val is normally ignored.
+  void TrackAllAndRemember(const size_t start_video_num, const int pause_val, float alpha);
+
+
+
   // Functions for subclasses that get called at appropriate times.
   virtual void VideoInit(const Video& video, const size_t video_num) {}
 

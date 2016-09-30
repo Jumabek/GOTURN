@@ -1,0 +1,600 @@
+commit 959aaed4a7031f4876f2b8dbfb27a158bfabf9c3
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sat Sep 24 09:11:28 2016 +0900
+
+    nets dir
+
+commit bd01f0a87ead02a98d0b6288623a019fd9167fa5
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Wed Sep 21 12:13:58 2016 +0900
+
+    change nets/models to models
+
+commit 3fb04e7094d1c56fc8776e20f27f1ab3d1511d33
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Wed Sep 14 09:14:16 2016 +0900
+
+    add line to link trax library
+
+commit 812857c5d5739b2387d77bafe250e07dd0fed7bd
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 16:10:24 2016 +0900
+
+    fix prt_smlr_npd
+
+commit 87b51d0eee62427ad6cf54ba062503876f08201f
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 15:43:23 2016 +0900
+
+    fix prt_smlr_npd
+
+commit bed08431e92ca82966ebdd6bd833f03a1ef0306f
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:43:20 2016 +0900
+
+    change ptr to prt like ptr_smlr_npd to  prt_smlr_npd
+
+commit ebd40e42da8abb332ac5f4dd9ab036af7f2cd654
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:35:34 2016 +0900
+
+    delete prt_smlr_npd dir.
+
+commit 2922f28d136392bc9c7bdc098f3e942a3aaaa021
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:29:52 2016 +0900
+
+    remove pr_tr_smlr_scrtch_npd
+
+commit 1da825f6833bb820961e84cfb3602d84e6845f02
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:28:37 2016 +0900
+
+    add loss.png from pr_tr folder
+
+commit e74bb0a479dff97289ed9ddab2ee27ec57ff5770
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:27:02 2016 +0900
+
+    add change results.log to previous one from pr_tr
+
+commit e2058b064d55bdf2227a8065be8f39fd16083cda
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:23:24 2016 +0900
+
+    delete nets/models/ptr_smlr_npd merge files
+
+commit 40af9bfc3816d3dbdff7d81e570d62fd3e8e2012
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:08:14 2016 +0900
+
+    delete nets/models/prt_smlr_npd dir
+
+commit a7c1aa7711f32370485dfb5c22994a9f19b40808
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 14:05:13 2016 +0900
+
+    delete merge_file_6VR50q and .merge_file_HXwTOc
+
+commit 52a37e0840878d8057c053982c26998e42ff6321
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 10:14:21 2016 +0900
+
+    trying to solve nets dir problem 3
+
+commit f7dedffddccc6c18d02b0a1a84312c967c3e101d
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 10:11:09 2016 +0900
+
+    trying to solve nets dir issue 2
+
+commit 1f41c475a69dc5dccbff1f356a191cc0f069fcd2
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 10:08:49 2016 +0900
+
+    trying to solve nets dir issue
+
+commit 06330a5c120cd968871b71f883501f3a66d57498
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 13 09:56:37 2016 +0900
+
+    Revert "fix set_xticks"
+    
+    This reverts commit c4bfd4fbb69d6b35e865081ea704df3374e01cd8.
+
+commit 46c980430637280f237222200c27b77c0710466e
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 21:07:17 2016 +0900
+
+    fix dir names
+
+commit e4999796900a14092eaa690f8e50b713494d5495
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 21:05:46 2016 +0900
+
+    delete unnecassary dir
+
+commit 7bdd5c0f54a496742e326e07ddee14ca6aa71c9c
+Merge: 873e255 2895f1f
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 21:04:23 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    MergeMessage
+
+commit 873e255074eab9f2149eef1ba636407d7e7d34f2
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 21:03:59 2016 +0900
+
+    nets dir
+
+commit 7f143319077255c618a9aeb098664fac96fd24ba
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 18:51:36 2016 +0900
+
+    change in nets
+
+commit 2895f1f1a5a9da67a5314a8ea6f3bb533f831ccf
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:39:36 2016 +0900
+
+    change in nets
+
+commit c4bfd4fbb69d6b35e865081ea704df3374e01cd8
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:39:04 2016 +0900
+
+    fix set_xticks
+
+commit 60ebedceff6c93378b369d54c2ae7e71068489a5
+Merge: 84eb2cd d08cae4
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:30:11 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    Merge message
+
+commit 84eb2cd681652f251e1c20c148c63f5a3c6e6992
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:29:39 2016 +0900
+
+    change in nets dir
+
+commit 3cd1c60f42c90d08416c3c250df9530cb9be02c8
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:29:15 2016 +0900
+
+    tell not to track Debug dir
+
+commit 2d77943f3c8390687d40b6bcf98b96acf9af92e3
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:28:48 2016 +0900
+
+    change to plot curve instead of bar
+
+commit d08cae40c4627933d3073cac975825a2c0d587a5
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 14:24:07 2016 +0900
+
+    change in nets dir
+
+commit 729bea6e989778652c8bd461c7dfc136688d4847
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 11:32:15 2016 +0900
+
+    delete some files from nets dir
+
+commit da0efc6dbf5b7c10df76e9d7cdcb5cf57d9d96ec
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 12 11:31:14 2016 +0900
+
+    change in nets dir
+
+commit d808a36bb17fdff0a3c2cfe8e659a9a622996677
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 6 11:49:45 2016 +0900
+
+    change RESULT_FILE variable to cnstant so that every iteration mean would be saved into one file
+
+commit eabe1476e2431c991acd55e381e8cfde9430aecd
+Merge: 57d11f7 4b16f95
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 6 11:39:22 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    Merge Message
+
+commit 57d11f76e5d99b8be4c21dc8b98fb517996c61c1
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 6 11:28:13 2016 +0900
+
+    return batch size to 50 because practical advice from ilya sutskevrsky was 128. so we have 50*2=100 which is almost 128 images in minibatch
+
+commit 4b16f95b503b6928393e88dbcc0ccbd7aabe776c
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Sep 6 11:04:06 2016 +0900
+
+    folder names change in nets
+
+commit 6c75788b2d103631498d62b5b53ff5bde003bdfd
+Merge: 5ad403e dbf6cd0
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:45:42 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    Merge Message
+
+commit dbf6cd0c1d721a36a3d927f2ef09c6f787a65485
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:43:34 2016 +0900
+
+    change batch size to 200
+
+commit 5ad403ed854d5c8777b5aa6b05c45764e14536f4
+Merge: dcb7334 c6d754e
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:42:22 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    Merge Message
+
+commit dcb7334bf0a0683c997b281d6fc70fd58f53c34a
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:41:37 2016 +0900
+
+    nothing important add
+
+commit 340e6db0dec26894b93fc4136bc055128157e5de
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:40:51 2016 +0900
+
+    fix ticks in y-axis
+
+commit b198e6a9acedc10d829af54491083517819fb44d
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:35:57 2016 +0900
+
+    reduce learning rate by 0.1. Because we are continuing trainign from 150K-th iteration
+
+commit c6d754e0a92d89834aac488e141821b7a2d02345
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Sep 5 17:12:05 2016 +0900
+
+    add script to unzip ilsvrc12
+
+commit 61a7b718b449caeb647ddbee4a8cfafe6e47bad3
+Merge: 9db2c2b 45f2620
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 19:52:46 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    Merge message
+
+commit 45f2620d403406b0a6631be25536cb06b103ed51
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 19:35:34 2016 +0900
+
+    nothing special just evaluation files name change
+
+commit 9db2c2b6d64ca5fbf421f1e92ae0b4853ddbf50c
+Merge: fb66907 6b0e813
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 18:24:50 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    Merge message
+
+commit fb669073e14156b2b8e2f20887b97a1823b663e6
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 18:24:20 2016 +0900
+
+    add val_evaluation.log
+
+commit 6b0e8131529ce9708a26522522568f0589a999ad
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 18:13:31 2016 +0900
+
+    fix plot_training_log.py
+
+commit 5215a236f7e35995b2ab3a0cf2e5c1f679b75d0f
+Merge: 1c2b46a 466c76b
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 18:13:22 2016 +0900
+
+    fix plot_training_log.py
+
+commit 466c76b0051742094d38e79aa94b6d8dde11447b
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Sep 4 18:05:58 2016 +0900
+
+    add nets dir from server
+
+commit 09cb4a0ff348992b6bff4c0c28311ce78841763e
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Sep 2 20:39:34 2016 +0900
+
+    change evaluate_all.m
+
+commit d143b42af5e8030498f3c63cbe0838062c2da6af
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Sep 2 15:01:57 2016 +0900
+
+    no important change to code done
+
+commit 1c2b46a4b9e2feadd5b1282cade5be34d1b96279
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Sep 2 10:46:23 2016 +0900
+
+    small matters
+
+commit 27b6461ad27b2d8ac3252273fde768d792dedb97
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Sep 2 10:45:59 2016 +0900
+
+    change N, number of models
+
+commit 1d8ee9d0b736b72730df7af4d1c5ef75f22bc301
+Merge: 7a34c15 7e7f9f7
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 17:55:01 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    I don't know what the heck is wrong
+
+commit 7e7f9f73d9aecba852f2c633fe62a257d8af61ea
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 17:53:04 2016 +0900
+
+    solver and prototxt for original
+
+commit 7a34c15eb6ec77a80de0eea1415ab979b60e337c
+Merge: e80779d d605f33
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 17:51:25 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    I am just merging because the change in server computer is not important i think
+
+commit e80779dc2dcfac938ea9dca1346c0b3dd699eccc
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 17:51:13 2016 +0900
+
+    small change
+
+commit d605f3385dec9d72c430cdea9b5c44fc5592e3ab
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 17:48:07 2016 +0900
+
+    drawings for small_scratch
+
+commit 0f618490e87a4bdb9ac1c63116343c5e2055a472
+Merge: 300640a 66b492d
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 14:37:36 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    This is the First  Merge on Server
+
+commit 300640a82cadda0531b66cd9d514829236845a33
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 14:37:03 2016 +0900
+
+    small scratch
+
+commit 66b492d7693af4d2123db9051a55b0679f9c7e0f
+Merge: 4a0abc0 2edd3f4
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 14:32:49 2016 +0900
+
+    Merge branch 'master' of https://github.com/Jumabek/GOTURN
+    
+    First merge Message
+
+commit 4a0abc07a34e7ebca17e701fcdc0484414b20529
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Tue Aug 30 14:26:51 2016 +0900
+
+    small scratch
+
+commit 2edd3f40df6622b1ce701460c31a85b15117d703
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 29 19:11:33 2016 +0900
+
+    plot training loss for small_scratch
+
+commit 840606f5d0d2664fb9949811f0139128d2a952cd
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sun Aug 28 13:18:17 2016 +0900
+
+    change log file extension to .log from .txt
+
+commit 8733c6d3e617dbd1ddd87febee8d648ef4e701d9
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sat Aug 27 22:22:45 2016 +0900
+
+    nothing special has been changed
+
+commit acec6ca7600e9cc7dcf5043fd1400ad0285a0b60
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Sat Aug 27 22:22:04 2016 +0900
+
+    change log file extension to .txt from .log
+
+commit 126805b3ad89217b062742b01f6f30ccc4e773b5
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 25 12:06:33 2016 +0900
+
+    scratch validation resultsa
+
+commit 081d5970a88e9c2ee3def9c6d2bd96af2cbbfa70
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 17:44:46 2016 +0900
+
+    fix model dir path in train.sh
+
+commit 0b45d7743b2c70fd1635ff140a88b3cb46f6df28
+Merge: 4b1a372 98adbfb
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 15:06:39 2016 +0900
+
+    merge train.sh
+
+commit 98adbfb4bb79d073943ea27226ec9ac1ea3e67dd
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 14:52:12 2016 +0900
+
+    evaluation of tune_conv
+
+commit a415f3a098eb6ca1cd6da2c71e124e2c4aaa7cea
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 14:50:44 2016 +0900
+
+    add for loop so that we can evaluate all snapshots
+
+commit 27fcb3c130d0ce4efb0b0d6ae0fdd75927883ad3
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 14:49:47 2016 +0900
+
+    tell .gitignore not to track tracker_output files
+
+commit 4b1a3721de7d1d830906f138bc8396b69d15fd83
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 14:40:01 2016 +0900
+
+    adjust train.sh to train from scratch and add solver and tracker.prototxt for scratch
+
+commit d657f331aa0a5fa8b1fbb1d78053a765868c07e8
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 11:55:33 2016 +0900
+
+    adjust bounding_box.h and some training output
+
+commit 45c3258fab33ec15c01027ed4178975eda8abc4f
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 11:46:48 2016 +0900
+
+    fix model_dir
+
+commit abd436a0e4073436cd5ede3fb109496cf1caa8b4
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Mon Aug 22 11:38:30 2016 +0900
+
+    training outputs
+
+commit b55f3adcadecd0b32f12fa119df648e45f2533b0
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Aug 19 14:17:13 2016 +0900
+
+    add models and tell gitignore not to track *.solverstate files
+
+commit 107202c1a45fcfd2e83b9bdc12d70f8a6b0966c4
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Aug 19 11:05:40 2016 +0900
+
+    tell .gitignore to ignore solverstate dir
+
+commit ab38ddf85530ad1d174c570e8dbeebb4a9e1655e
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Aug 19 10:55:00 2016 +0900
+
+    change file positions
+
+commit d2aa5b54f177045b73e93161c38f1b8dc500da03
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Aug 19 10:54:27 2016 +0900
+
+    add some adjustment
+
+commit ff3bb651113dd9bfcbf208eee6ef9e33cf1d3573
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Fri Aug 19 10:52:45 2016 +0900
+
+    change some path
+
+commit af875ec1bd5b047aa4971ea6260e2f820e60bdb0
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 16:20:49 2016 +0900
+
+    remove solver_state_temp. Cuz i ddint understamnd why you need it
+
+commit 56e5cb3dde83cd55612fd3c1c55cce8f38b3b34a
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 16:13:28 2016 +0900
+
+    add some stuff from my PC
+
+commit ba53190db76d48e012588aace60168517051aaca
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 16:05:06 2016 +0900
+
+    ad .gitignore
+
+commit c01d3daf66bf26f2a261e5d2ebff822c3b48f0ce
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 14:55:55 2016 +0900
+
+    add iostream include so that it can use std
+
+commit 15504b86af9569344f2107d9b24f3d7dfd4eb7c1
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 14:54:29 2016 +0900
+
+    add iostream in order to use std
+
+commit d269c41cbab5b0473fd884a492694e6fb5aeaeb3
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 14:47:14 2016 +0900
+
+    changed the position of setting up network and loading dataset. Network should be set up first because we should waste time to load dataset and get error in setting up network
+
+commit 378da75ff729858bfc3b8bc4ae6a9fb08fa60544
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 14:44:27 2016 +0900
+
+    add imgproc.hpp to make this file compatible with opencv 3
+
+commit 30c99a7fcc6b69a912bb0a4a114ad270562fca48
+Author: Jumabek <jumabek4044@gmail.com>
+Date:   Thu Aug 18 14:39:46 2016 +0900
+
+    Change some path variables so that all the related model files would be stored in one place
+
+commit 5d4fa8193792f493d2a443f472874692fa430533
+Author: David Held <davheld@eecs.berkeley.edu>
+Date:   Sun Aug 14 15:03:52 2016 -0700
+
+    Adding caffe namespace qualifier for cpu mode
+
+commit 5297c9cdeb01fa68d15cfe4465671fcc864ad76b
+Author: David Held <davheld@eecs.berkeley.edu>
+Date:   Sun Aug 14 15:01:32 2016 -0700
+
+    Removing validation testing during training (no test net set so this wasn't really doing anything)
+
+commit 20ad721e4b674937a871c27ee621a8e46496acfa
+Author: David Held <davheld@eecs.berkeley.edu>
+Date:   Sun Aug 14 14:59:13 2016 -0700
+
+    Allowing training with more generated images than batch size
+
+commit 645a1326df00053d0115ebc8e325c2526d880ba0
+Author: David Held <davheld@eecs.berkeley.edu>
+Date:   Tue Jul 26 20:39:16 2016 -0700
+
+    Adding contents to readme
+
+commit a56f5e71f3e00562797cdc3c89d114782e5e4964
+Author: David Held <davheld@eecs.berkeley.edu>
+Date:   Tue Jul 26 19:44:45 2016 -0700
+
+    Committing all files

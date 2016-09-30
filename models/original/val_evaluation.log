@@ -1,6 +1,7 @@
 Thresh: 0.500000, Mean: 0.585148
 Thresh: 0.700000, Mean: 0.452671
 Thresh: 0.900000, Mean: 0.311988
+
 Thresh: 0.500000, Mean: 0.533417
 Thresh: 0.700000, Mean: 0.423067
 Thresh: 0.900000, Mean: 0.287848
@@ -40,4 +41,8 @@ Thresh: 0.900000, Mean: 0.307715
 Thresh: 0.500000, Mean: 0.585148
 Thresh: 0.700000, Mean: 0.452671
 Thresh: 0.900000, Mean: 0.311988
+
+Thresh: 0.500000, Mean: 0.585721
+Thresh: 0.700000, Mean: 0.453363
+Thresh: 0.900000, Mean: 0.312449
 

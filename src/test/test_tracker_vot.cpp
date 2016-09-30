@@ -23,12 +23,15 @@ int main (int argc, char *argv[]) {
   const string& model_file   = argv[1];
   const string& trained_file = argv[2];
 
+  const bool track_by_memorizing = atoi(argv[3]);
+
   int gpu_id = 0;
-  if (argc >= 4) {
-    gpu_id = atoi(argv[3]);
+  if (argc >= 5) {
+    gpu_id = atoi(argv[4]);
   }
 
   const bool do_train = false;
+
   Regressor regressor(model_file, trained_file, gpu_id, do_train);
 
   // Ensuring randomness for fairness.
@@ -47,7 +50,29 @@ int main (int argc, char *argv[]) {
   // Load the first frame and use the initialization region to initialize the tracker.
   tracker.Init(path, region, &regressor);
 
-  //track
+  //if track by memorizing
+  if(track_by_memorizing){
+	  float dummy;
+	  while (true) {
+	       path = vot.frame(); // Get the next frame
+	       if (path.empty()) break; // Are we done?
+
+	       // Load current image.
+	       const cv::Mat& image = cv::imread(path);
+
+	       // Track and estimate the bounding box location.
+	       BoundingBox bbox_estimate;
+	       tracker.TrackByMemorizing(image, &regressor, &bbox_estimate,dummy);
+
+	       bbox_estimate.GetRegion(&region);
+
+	       vot.report(region); // Report the position of the tracker
+	   }
+
+  }
+
+  else{
+
   while (true) {
       path = vot.frame(); // Get the next frame
       if (path.empty()) break; // Are we done?
@@ -63,7 +88,7 @@ int main (int argc, char *argv[]) {
 
       vot.report(region); // Report the position of the tracker
   }
-
+}
   // Finishing the communication is completed automatically with the destruction
   // of the communication object (if you are using pointers you have to explicitly
   // delete the object).

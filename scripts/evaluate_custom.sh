@@ -18,7 +18,7 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
-MODEL_DIR=models/sml_scrtch
+MODEL_DIR=models/smlr_scrtch_npd
 FOLDER=GOTURN1_val
 
 DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
@@ -26,7 +26,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 RESULT_FILE=$MODEL_DIR/val_evaluation.log
 
 
-for i in $(seq 1 20)
+for i in $(seq 1 4)
 do 
 	echo $i
 	iter=$(($i*50000))

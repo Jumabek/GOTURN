@@ -68,6 +68,63 @@ void TrackerManager::TrackAll(const size_t start_video_num, const int pause_val)
   PostProcessAll();
 }
 
+
+//------------TrackAllAndMemorize version of TrackAll
+void TrackerManager::TrackAllAndRemember(float alpha) {
+	TrackAllAndRemember(0, 1, alpha);
+}
+
+void TrackerManager::TrackAllAndRemember(const size_t start_video_num, const int pause_val, float alpha) {
+  // Iterate over all videos and track the target object in each.
+  for (size_t video_num = start_video_num; video_num < videos_.size(); ++video_num) {
+    // Get the video.
+    const Video& video = videos_[video_num];
+
+    // Perform any pre-processing steps on this video.
+    VideoInit(video, video_num);
+
+    // Get the first frame of this video with the initial ground-truth bounding box (to initialize the tracker).
+    int first_frame;
+    cv::Mat image_curr;
+    BoundingBox bbox_gt;
+    video.LoadFirstAnnotation(&first_frame, &image_curr, &bbox_gt);
+
+    // Initialize the tracker.
+    tracker_->Init(image_curr, bbox_gt, regressor_);
+
+    // Iterate over the remaining frames of the video.
+    for (size_t frame_num = first_frame + 1; frame_num < video.all_frames.size(); ++frame_num) {
+
+      // Get image for the current frame.
+      // (The ground-truth bounding box is used only for visualization).
+      const bool draw_bounding_box = false;
+      const bool load_only_annotation = false;
+      cv::Mat image_curr;
+      BoundingBox bbox_gt;
+      bool has_annotation = video.LoadFrame(frame_num,
+                                            draw_bounding_box,
+                                            load_only_annotation,
+                                            &image_curr, &bbox_gt);
+
+      // Get ready to track the object.
+      SetupEstimate();
+
+      // Track and estimate the target's bounding box location in the current image.
+      // Important: this method cannot receive bbox_gt (the ground-truth bounding box) as an input.
+      BoundingBox bbox_estimate_uncentered;
+      tracker_->TrackByMemorizing(image_curr, regressor_, &bbox_estimate_uncentered,alpha);
+
+      // Process the output (e.g. visualize / save results).
+      ProcessTrackOutput(frame_num, image_curr, has_annotation, bbox_gt,
+                           bbox_estimate_uncentered, pause_val);
+    }
+    PostProcessVideo();
+  }
+  PostProcessAll();
+}
+
+
+
 TrackerVisualizer::TrackerVisualizer(const std::vector<Video>& videos,
                                      RegressorBase* regressor, Tracker* tracker) :
   TrackerManager(videos, regressor, tracker)

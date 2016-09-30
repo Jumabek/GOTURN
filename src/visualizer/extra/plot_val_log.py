@@ -111,6 +111,7 @@ def plot_chart_single_threshold(path_to_png, path_to_log_list,legend_labels):
     fig, ax = plt.subplots()
     markers = ('o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd')
     lineStyles = [ '-', '--', ':','-.','-', '--', ':','-.']
+    maxN=0
     for i in range(len(path_to_log_list)):
         path_to_log=path_to_log_list[i]
         linestyle = lineStyles[i]
@@ -125,24 +126,27 @@ def plot_chart_single_threshold(path_to_png, path_to_log_list,legend_labels):
         
         N = len(mean50)
 
-        
-        ind = np.arange(N)
-        
+        if N>maxN:
+			maxN=N
+        print "N = %d, maxN = %d"%(N,maxN)      
+
+        ind = np.arange(N)     
         #width of the bars
         
         print "linestyle = %s"%linestyle
         rects1 = ax.plot(ind,mean50,marker,linestyle=linestyle,label=legend_labels[i])
         #rects2 = ax.plot(ind,mean70,marker,color='b',linestyle=linestyle)
         #rects3 = ax.plot(ind,mean90,marker,color='g',linestyle=linestyle)
-        
-        ax.set_ylabel('Means')
-        ax.set_xlabel('Iterations')
-        ax.set_title('Means of average IoU on validation set')
-        ax.set_xticks(ind)
-#        #ticks = ['50K', '100K', '150K', '200K', '250K','300K', '350K', '400K', '450K', '500K']
-        ticks = []
-        for i in range(1,N+1):
-            ticks.append(str(i*50)+'K')
+    
+	   
+    ax.set_ylabel('Means')
+    ax.set_xlabel('Iterations')
+    ax.set_title('Means of average IoU on validation set')
+    ax.set_xticks(np.arange(maxN))
+
+    ticks = []
+    for i in range(1,maxN+1):
+    	ticks.append(str(i*50)+'K')
     ax.set_xticklabels(ticks)    
     ticks = np.arange(0,0.7,0.05)
     ax.set_yticks(ticks)    

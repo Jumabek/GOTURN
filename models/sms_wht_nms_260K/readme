@@ -1,0 +1,1 @@
+This model starts training from 260K pretrained model caffe/models/bvlc_reference_caffenet_siamese/*caffemodel 

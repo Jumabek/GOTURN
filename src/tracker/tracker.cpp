@@ -79,7 +79,7 @@ void Tracker::Track(const cv::Mat& image_curr, RegressorBase* regressor,
 }
 
 void Tracker::TrackByMemorizing(const cv::Mat& image_curr, RegressorBase* regressor,
-                    BoundingBox* bbox_estimate_uncentered) {
+                    BoundingBox* bbox_estimate_uncentered,float alpha) {
   // Get target from previous image.
   cv::Mat target_pad;
   CropPadImage(bbox_prev_tight_, image_prev_, &target_pad);

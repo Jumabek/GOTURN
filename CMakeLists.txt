@@ -76,6 +76,11 @@ add_executable (test_tracker_alov src/test/test_tracker_alov.cpp)
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${Caffe_LIBRARIES})
 target_link_libraries (test_tracker_alov ${PROJECT_NAME})
 
+add_executable (test_tracker_alov_by_memorizing src/test/test_tracker_alov_by_memorizing.cpp)
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${Caffe_LIBRARIES})
+target_link_libraries (test_tracker_alov_by_memorizing ${PROJECT_NAME})
+
+
 add_executable (save_videos_vot src/test/save_videos_vot.cpp)
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${Caffe_LIBRARIES})
 target_link_libraries (save_videos_vot ${PROJECT_NAME})
