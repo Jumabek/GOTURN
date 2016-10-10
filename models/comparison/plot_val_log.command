@@ -9,15 +9,24 @@ python ../../src/visualizer/extra/plot_val_log.py affect_of_iter.png ../sms_wht_
 
 #best siamese vs. original model
 
- python ../../src/visualizer/extra/plot_val_log.py npd_siamese_vs_orig.png ../sms_wht_nms_200K_5conv_alpha0.5/val_evaluation.log,../original/val_evaluation.log 'initialized from 200K pre-train','original'
+ python ../../src/visualizer/extra/plot_val_log.py npd_siamese_vs_orig.png ../prt_conv5_pad_450K_conv5_pad/val_evaluation.log,../original/val_evaluation.log,../prt_conv5_pad_450K_conv5_pad_full/val_evaluation.log 'prt_conv5_pad_450K_conv5_pad','original','prt_conv5_pad_450K_conv5_pad_full'
 
 
 
-#full vs powerOf2
+#full vs powerOf2 for siamese 4conv
 
- python ../../src/visualizer/extra/plot_val_log.py full_vs_power2.png ../sms_wht_nms_200K/val_evaluation.log,../sms_wht_nms_200K_full/val_evaluation.log 'initialized from 200K pre-train','4096 fully connected'
+ python ../../src/visualizer/extra/plot_val_log.py siamese_full_vs_power2_4conv.png ../prt_200K_4conv/val_evaluation.log,../prt_200K_4conv_full/val_evaluation.log 'prt_200K_4conv ','prt_200K_4conv full'
 
 
-#4 conv vs 5 conv vs 5 conv train
- python ../../src/visualizer/extra/plot_val_log.py siamese_nets.png ../sms_wht_nms_200K/val_evaluation.log,../sms_wht_nms_200K_5conv/val_evaluation.log,../sms_wht_nms_200K_train_conv5/val_evaluation.log,../sms_wht_nms_200K_5conv_alpha0.5/val_evaluation.log,../sms_200K_prt_4conv_alpha0.5/val_evaluation.log 'initialized from 200K pre-train','5 conv version','train conv 5','5 conv alpha=0.5','4 conv memorized'
+#full vs powerOf2 for orig
 
+ python ../../src/visualizer/extra/plot_val_log.py orig_full_vs_power2.png ../original/val_evaluation.log,../smlr_fc/val_evaluation.log 'orig ','orig full'
+
+
+
+#siamese nets 
+ python ../../src/visualizer/extra/plot_val_log.py siamese_nets.png ../prt_200K_4conv/val_evaluation.log,../prt_200K_rand_conv5/val_evaluation.log,../prt_200K_train_conv5/val_evaluation.log,../prt_200K_rand_conv5_alpha0.5/val_evaluation.log,../prt_200K_4conv_alpha0.5/val_evaluation.log,../prt_260K_4conv/val_evaluation.log,../prt_450K_5conv/val_evaluation.log,../prt_450_5conv_pad_full 'initialized from 200K pre-train','5 conv version. conv5 rand','train conv 5','5 conv alpha=0.5','4 conv alpha = 0.5','prt_260K_4conv','prt_450K_5conv conv5 has padding','prt_450K_5conv_pad_full'
+
+
+#smlr conv 5 lr vs 10x higher random initialized conv5 lr
+python ../../src/visualizer/extra/plot_val_log.py conv5_lr_vs_10x_rand_lr.png ../prt_450K_train_conv5_smlr_lr/val_evaluation.log,../sms_wht_nms_200K_train_conv5/val_evaluation.log 'conv5 train ','conv5 10x higher lr with rand init'

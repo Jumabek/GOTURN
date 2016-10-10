@@ -18,7 +18,7 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
-MODEL_DIR=models/original
+MODEL_DIR=models/prt_450K_conv5_pad_full
 FOLDER=GOTURN1_val
 
 DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
@@ -26,7 +26,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 RESULT_FILE=$MODEL_DIR/val_evaluation.log
 
 
-for i in $(seq 10 10)
+for i in $(seq 15 15)
 do 
 	echo $i
 	iter=$(($i*50000))

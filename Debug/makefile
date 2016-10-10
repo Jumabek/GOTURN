@@ -19,6 +19,7 @@ RM := rm -rf
 -include scripts/Fscore_v1.0/polygonClipper/subdir.mk
 -include build/CMakeFiles/train.dir/src/train/subdir.mk
 -include build/CMakeFiles/test_tracker_vot.dir/src/test/subdir.mk
+-include build/CMakeFiles/test_tracker_alov_by_memorizing.dir/src/test/subdir.mk
 -include build/CMakeFiles/test_tracker_alov.dir/src/test/subdir.mk
 -include build/CMakeFiles/show_tracker_vot.dir/src/visualizer/subdir.mk
 -include build/CMakeFiles/show_tracker_alov.dir/src/visualizer/subdir.mk
@@ -62,19 +63,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: goturn_remember
+all: goturn
 
 # Tool invocations
-goturn_remember: $(OBJS) $(USER_OBJS)
+goturn: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "goturn_remember" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "goturn" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) goturn_remember
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) goturn
 	-@echo ' '
 
 .PHONY: all clean dependents

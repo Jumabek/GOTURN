@@ -1,5 +1,6 @@
 
 bash scripts/evaluate_val.sh /media/ailab/Data/alov_imagedata++ /media/ailab/Data/alov300++_rectangleAnnotation_full
+bash scripts/evaluate_val2.sh /media/ailab/Data/alov_imagedata++ /media/ailab/Data/alov300++_rectangleAnnotation_full
 
 bash scripts/evaluate_val_by_memorizing.sh /media/ailab/Data/alov_imagedata++ /media/ailab/Data/alov300++_rectangleAnnotation_full
 

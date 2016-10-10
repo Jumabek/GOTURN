@@ -34,6 +34,7 @@ src/helper \
 scripts/Fscore_v1.0/polygonClipper \
 build/CMakeFiles/train.dir/src/train \
 build/CMakeFiles/test_tracker_vot.dir/src/test \
+build/CMakeFiles/test_tracker_alov_by_memorizing.dir/src/test \
 build/CMakeFiles/test_tracker_alov.dir/src/test \
 build/CMakeFiles/show_tracker_vot.dir/src/visualizer \
 build/CMakeFiles/show_tracker_alov.dir/src/visualizer \

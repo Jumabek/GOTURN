@@ -18,7 +18,7 @@ SAVE_VIDEOS=0
 
 VIDEOS_FOLDER=$1
 ANNOTATIONS_FOLDER=$2
-MODEL_DIR=models/sms_wht_nms_200K_train_conv5
+MODEL_DIR=models/sms_train_conv5_smlr_lr
 FOLDER=GOTURN1_val
 
 DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
@@ -26,7 +26,7 @@ DEPLOY_PROTO=$MODEL_DIR/tracker.prototxt
 RESULT_FILE=$MODEL_DIR/val_evaluation.log
 
 
-for i in $(seq 4 8)
+for i in $(seq 12 12)
 do 
 	echo $i
 	iter=$(($i*50000))

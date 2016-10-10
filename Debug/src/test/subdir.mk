@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../src/test/save_videos_vot.cpp \
 ../src/test/test_tracker_alov.cpp \
+../src/test/test_tracker_alov_by_memorizing.cpp \
 ../src/test/test_tracker_vot.cpp 
 
 OBJS += \
 ./src/test/save_videos_vot.o \
 ./src/test/test_tracker_alov.o \
+./src/test/test_tracker_alov_by_memorizing.o \
 ./src/test/test_tracker_vot.o 
 
 CPP_DEPS += \
 ./src/test/save_videos_vot.d \
 ./src/test/test_tracker_alov.d \
+./src/test/test_tracker_alov_by_memorizing.d \
 ./src/test/test_tracker_vot.d 
 
 
